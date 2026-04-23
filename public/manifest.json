@@ -1,0 +1,17 @@
+{
+  "name": "Altus Apollo Men's Grooming Lounge",
+  "short_name": "Altus Apollo",
+  "description": "Premium barbershop in Costa Mesa offering precision haircuts, beard sculpting, and traditional hot towel shaves.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8f6f1",
+  "theme_color": "#1e2a3a",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

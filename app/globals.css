@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Luxury color palette: Navy, Gold, Stone, Cream */
+    --background: 40 20% 98%; /* Warm off-white */
+    --foreground: 220 30% 15%; /* Deep navy/charcoal */
+
+    --card: 40 15% 96%;
+    --card-foreground: 220 30% 15%;
+
+    --popover: 40 20% 98%;
+    --popover-foreground: 220 30% 15%;
+
+    --primary: 220 35% 20%; /* Deep navy */
+    --primary-foreground: 40 20% 98%;
+
+    --secondary: 40 30% 92%; /* Warm stone */
+    --secondary-foreground: 220 30% 15%;
+
+    --muted: 40 15% 90%;
+    --muted-foreground: 220 15% 45%;
+
+    --accent: 38 60% 45%; /* Warm gold */
+    --accent-foreground: 40 20% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 15% 85%;
+    --input: 220 15% 85%;
+    --ring: 38 60% 45%;
+
+    --radius: 0rem;
+
+    /* Custom brand tokens */
+    --navy: 220 35% 20%;
+    --gold: 38 60% 45%;
+    --stone: 40 15% 90%;
+    --cream: 40 20% 98%;
+    --charcoal: 220 20% 25%;
+  }
+
+  .dark {
+    --background: 220 30% 10%;
+    --foreground: 40 20% 98%;
+
+    --card: 220 30% 12%;
+    --card-foreground: 40 20% 98%;
+
+    --popover: 220 30% 10%;
+    --popover-foreground: 40 20% 98%;
+
+    --primary: 38 60% 50%;
+    --primary-foreground: 220 30% 10%;
+
+    --secondary: 220 25% 18%;
+    --secondary-foreground: 40 20% 98%;
+
+    --muted: 220 25% 18%;
+    --muted-foreground: 40 15% 65%;
+
+    --accent: 38 60% 50%;
+    --accent-foreground: 220 30% 10%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 25% 20%;
+    --input: 220 25% 20%;
+    --ring: 38 60% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  @apply bg-accent/20 text-foreground;
+}
+
+/* Custom scrollbar for luxury feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-secondary;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/30;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary/50;
+}
