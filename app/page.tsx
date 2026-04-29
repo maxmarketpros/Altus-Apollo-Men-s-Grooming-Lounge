@@ -48,13 +48,10 @@ const trustPoints = [
   },
 ]
 
-const galleryImages = [
-  { src: "/stock-photos/7.jpg", alt: "Precision fade haircut" },
-  { src: "/stock-photos/8.jpg", alt: "Modern textured cut" },
-  { src: "/stock-photos/10.jpg", alt: "Expert clipper work" },
-  { src: "/stock-photos/15.jpg", alt: "Beard sculpting detail" },
-  { src: "/stock-photos/13.jpg", alt: "Premium grooming tools" },
-  { src: "/stock-photos/17.jpg", alt: "Professional scissors" },
+const galleryVideos = [
+  { src: "https://drive.google.com/file/d/1zascKL2Ntxe3RZmRcRMX7UQqx3ZzatB5/preview", title: "Grooming reel 1" },
+  { src: "https://drive.google.com/file/d/1WsU8ag0uEZvS-wk4orXfdYKZ009eW4Re/preview", title: "Grooming reel 2" },
+  { src: "https://drive.google.com/file/d/1rYnqBUJLcmZiIDU5w-3lAs_lwUA3Nv2t/preview", title: "Grooming reel 3" },
 ]
 
 export default function HomePage() {
@@ -145,9 +142,9 @@ export default function HomePage() {
               </Button>
             </div>
             <div className="relative">
-              <div className="aspect-[4/5] relative">
+              <div className="aspect-[4/3] relative">
                 <Image
-                  src="/client-photos/client-1.jpg"
+                  src="/client-photos/client-landscape.png"
                   alt="Master barber at work"
                   fill
                   className="object-cover"
@@ -359,19 +356,19 @@ export default function HomePage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {galleryImages.map((image, index) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {galleryVideos.map((video, index) => (
               <div
                 key={index}
-                className="aspect-square relative overflow-hidden group"
+                className="aspect-[9/16] relative overflow-hidden bg-primary/5"
               >
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                <iframe
+                  src={video.src}
+                  title={video.title}
+                  allow="autoplay; encrypted-media"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full border-0"
                 />
-                <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors duration-300" />
               </div>
             ))}
           </div>
