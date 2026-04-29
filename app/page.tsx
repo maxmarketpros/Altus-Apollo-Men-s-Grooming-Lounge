@@ -147,7 +147,7 @@ export default function HomePage() {
             <div className="relative">
               <div className="aspect-[4/5] relative">
                 <Image
-                  src="/client-photos/barbershop-client.jpg"
+                  src="/client-photos/client-1.jpg"
                   alt="Master barber at work"
                   fill
                   className="object-cover"

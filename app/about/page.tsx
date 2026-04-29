@@ -99,7 +99,7 @@ export default function AboutPage() {
             <div className="relative">
               <div className="aspect-[4/5] relative">
                 <Image
-                  src="/client-photos/barbershop-client.jpg"
+                  src="/client-photos/client-2.jpg"
                   alt="Founder at work in the shop"
                   fill
                   className="object-cover"
