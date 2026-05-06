@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Clock, Award, Scissors, MapPin, Phone, ArrowRight } from "lucide-react"
+import { Clock, Award, Scissors, MapPin, Phone, ArrowRight, Instagram } from "lucide-react"
 
 const services = [
   {
@@ -108,6 +108,31 @@ export default function HomePage() {
               </Button>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Instagram Banner */}
+      <section className="bg-primary text-primary-foreground">
+        <div className="mx-auto max-w-7xl px-6 py-6 lg:px-8">
+          <a
+            href="https://www.instagram.com/sculpture_mh?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-center"
+          >
+            <div className="flex items-center gap-3">
+              <Instagram className="h-6 w-6 text-accent" />
+              <p className="text-accent font-medium tracking-widest uppercase text-xs sm:text-sm">
+                Follow the Craft
+              </p>
+            </div>
+            <p className="text-primary-foreground/90 text-sm sm:text-base">
+              See our latest cuts, shaves, and beard work on Instagram
+              <span className="ml-2 inline-flex items-center gap-1 text-accent group-hover:gap-2 transition-all">
+                @sculpture_mh <ArrowRight className="h-4 w-4" />
+              </span>
+            </p>
+          </a>
         </div>
       </section>
 

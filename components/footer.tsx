@@ -148,7 +148,9 @@ export function Footer() {
           </p>
           <div className="flex items-center gap-4">
             <a
-              href="#"
+              href="https://www.instagram.com/sculpture_mh?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-primary-foreground/50 hover:text-primary-foreground transition-colors"
               aria-label="Instagram"
             >
