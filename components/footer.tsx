@@ -2,6 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Phone, Mail, MapPin, Clock, Instagram, Facebook } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { SQUARE_BOOKING_URL } from "@/lib/constants"
 
 const navigation = {
   main: [
@@ -34,7 +35,9 @@ export function Footer() {
               asChild
               className="bg-accent text-accent-foreground hover:bg-accent/90 px-8 py-6 text-base"
             >
-              <Link href="/contact#booking-form">Book Your Appointment</Link>
+              <a href={SQUARE_BOOKING_URL} target="_blank" rel="noopener noreferrer">
+                Book Your Appointment
+              </a>
             </Button>
             <Button
               asChild

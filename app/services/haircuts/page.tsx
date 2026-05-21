@@ -9,6 +9,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import { ArrowRight, Check } from "lucide-react"
+import { SQUARE_BOOKING_URL } from "@/lib/constants"
 
 export const metadata: Metadata = {
   title: "Men's Haircuts | Costa Mesa Barber | Altus Apollo Grooming Lounge",
@@ -88,7 +89,9 @@ export default function HaircutsPage() {
               size="lg"
               className="bg-accent text-accent-foreground hover:bg-accent/90 px-8"
             >
-              <Link href="/contact#booking-form">Book Your Haircut</Link>
+              <a href={SQUARE_BOOKING_URL} target="_blank" rel="noopener noreferrer">
+                Book Your Haircut
+              </a>
             </Button>
           </div>
         </div>
@@ -362,7 +365,9 @@ export default function HaircutsPage() {
               size="lg"
               className="bg-accent text-accent-foreground hover:bg-accent/90 px-8"
             >
-              <Link href="/contact#booking-form">Book Your Haircut</Link>
+              <a href={SQUARE_BOOKING_URL} target="_blank" rel="noopener noreferrer">
+                Book Your Haircut
+              </a>
             </Button>
             <Button
               asChild

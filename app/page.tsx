@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Clock, Award, Scissors, MapPin, Phone, ArrowRight, Instagram } from "lucide-react"
+import { SQUARE_BOOKING_URL } from "@/lib/constants"
 
 const services = [
   {
@@ -101,7 +102,9 @@ export default function HomePage() {
                 size="lg"
                 className="bg-accent text-accent-foreground hover:bg-accent/90 px-8"
               >
-                <Link href="/contact#booking-form">Book Service</Link>
+                <a href={SQUARE_BOOKING_URL} target="_blank" rel="noopener noreferrer">
+                  Book Service
+                </a>
               </Button>
               <Button
                 asChild

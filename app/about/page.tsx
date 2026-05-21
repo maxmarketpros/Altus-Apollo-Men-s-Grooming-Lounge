@@ -3,6 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
+import { SQUARE_BOOKING_URL } from "@/lib/constants"
 
 export const metadata: Metadata = {
   title: "About | Altus Apollo Men's Grooming Lounge | Costa Mesa Barber",
@@ -295,9 +296,14 @@ export default function AboutPage() {
               asChild
               className="mt-10 bg-accent text-accent-foreground hover:bg-accent/90 px-8"
             >
-              <Link href="/contact#booking-form" className="flex items-center gap-2">
+              <a
+                href={SQUARE_BOOKING_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2"
+              >
                 Book Your Experience <ArrowRight className="h-4 w-4" />
-              </Link>
+              </a>
             </Button>
           </div>
         </div>

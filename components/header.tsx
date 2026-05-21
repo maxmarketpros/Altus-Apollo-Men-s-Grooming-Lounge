@@ -11,6 +11,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { SQUARE_BOOKING_URL } from "@/lib/constants"
 
 const services = [
   { name: "Men's Haircuts", href: "/services/haircuts" },
@@ -85,7 +86,9 @@ export function Header() {
             <a href="tel:+13478547551">(347) 854-7551</a>
           </Button>
           <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90 px-6">
-            <Link href="/contact#booking-form">Book Service</Link>
+            <a href={SQUARE_BOOKING_URL} target="_blank" rel="noopener noreferrer">
+              Book Service
+            </a>
           </Button>
         </div>
 
@@ -145,9 +148,14 @@ export function Header() {
                 </a>
               </Button>
               <Button asChild className="w-full bg-primary text-primary-foreground">
-                <Link href="/contact#booking-form" onClick={() => setMobileMenuOpen(false)}>
+                <a
+                  href={SQUARE_BOOKING_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
                   Book Service
-                </Link>
+                </a>
               </Button>
             </div>
           </div>

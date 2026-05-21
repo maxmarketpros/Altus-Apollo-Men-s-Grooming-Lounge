@@ -9,6 +9,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import { ArrowRight } from "lucide-react"
+import { SQUARE_BOOKING_URL } from "@/lib/constants"
 
 export const metadata: Metadata = {
   title: "Hot Towel Shave & Razor Shave | Costa Mesa | Altus Apollo",
@@ -110,7 +111,9 @@ export default function ShavePage() {
               size="lg"
               className="bg-accent text-accent-foreground hover:bg-accent/90 px-8"
             >
-              <Link href="/contact#booking-form">Book Hot Towel Shave</Link>
+              <a href={SQUARE_BOOKING_URL} target="_blank" rel="noopener noreferrer">
+                Book Hot Towel Shave
+              </a>
             </Button>
           </div>
         </div>
@@ -330,7 +333,9 @@ export default function ShavePage() {
               size="lg"
               className="bg-accent text-accent-foreground hover:bg-accent/90 px-8"
             >
-              <Link href="/contact#booking-form">Book Hot Towel Shave</Link>
+              <a href={SQUARE_BOOKING_URL} target="_blank" rel="noopener noreferrer">
+                Book Hot Towel Shave
+              </a>
             </Button>
             <Button
               asChild

@@ -1,12 +1,14 @@
 import type { Metadata } from "next"
 import Image from "next/image"
-import { Phone, Mail, MapPin, Clock, Navigation } from "lucide-react"
+import { Phone, Mail, MapPin, Clock, Navigation, ArrowRight } from "lucide-react"
+import { Button } from "@/components/ui/button"
 import { BookingForm } from "@/components/booking-form"
+import { SQUARE_BOOKING_URL } from "@/lib/constants"
 
 export const metadata: Metadata = {
-  title: "Contact & Book | Altus Apollo Men's Grooming Lounge | Costa Mesa Barber",
+  title: "Contact | Altus Apollo Men's Grooming Lounge | Costa Mesa Barber",
   description:
-    "Contact Altus Apollo Men's Grooming Lounge in Costa Mesa. Book your appointment for premium haircuts, beard sculpting, or hot towel shave. Walk-ins welcome. Call (347) 854-7551.",
+    "Get in touch with Altus Apollo Men's Grooming Lounge in Costa Mesa. Questions, special requests, or feedback — we'd love to hear from you. Call (347) 854-7551 or send us a message.",
 }
 
 const hours = [
@@ -41,11 +43,12 @@ export default function ContactPage() {
               Get In Touch
             </p>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-primary-foreground leading-tight mb-6">
-              Contact & Book Your Appointment
+              We&apos;d Love to Hear From You
             </h1>
             <p className="text-primary-foreground/80 text-lg md:text-xl leading-relaxed">
-              Ready to experience refined men&apos;s grooming in Costa Mesa? Book your appointment or
-              visit us for a walk-in. We look forward to serving you.
+              Questions about a service, a special request, or just want to say hello? Reach out
+              and our team will get back to you. Ready to book? Reserve your appointment online any
+              time.
             </p>
           </div>
         </div>
@@ -171,52 +174,67 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Booking Form Section */}
-      <section id="booking-form" className="py-24 lg:py-32 bg-secondary scroll-mt-20">
+      {/* Get in Touch Section */}
+      <section id="get-in-touch" className="py-24 lg:py-32 bg-secondary scroll-mt-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div>
               <p className="text-accent font-medium tracking-widest uppercase text-sm mb-4">
-                Book Now
+                Get in Touch
               </p>
               <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-6">
-                Reserve Your Appointment
+                Send Us a Message
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed mb-8">
                 <p>
-                  Ready to experience the Altus Apollo difference? Use this form to request your
-                  appointment. We&apos;ll confirm your booking within 24 hours.
+                  Have a question, a special request, or just want to learn more about the Altus
+                  Apollo experience? Send us a note and we&apos;ll get back to you personally.
                 </p>
                 <p>
-                  Whether you&apos;re seeking a precision haircut, expert beard sculpting, or our
-                  signature hot towel shave, we&apos;re here to deliver an exceptional grooming
-                  experience.
+                  Looking to lock in a time? You can reserve your appointment online any time using
+                  the button below — no waiting on a callback.
                 </p>
               </div>
+
+              <Button
+                asChild
+                size="lg"
+                className="bg-accent text-accent-foreground hover:bg-accent/90 px-8 mb-8"
+              >
+                <a
+                  href={SQUARE_BOOKING_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  Book on Square <ArrowRight className="h-4 w-4" />
+                </a>
+              </Button>
+
               <div className="bg-background p-6">
                 <h3 className="font-medium text-foreground mb-3">What to Expect</h3>
                 <ul className="space-y-2 text-muted-foreground text-sm">
                   <li className="flex items-start gap-2">
                     <span className="w-1.5 h-1.5 bg-accent mt-2 shrink-0" />
-                    We&apos;ll confirm your appointment via phone or email
+                    We typically reply within 24 hours
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="w-1.5 h-1.5 bg-accent mt-2 shrink-0" />
-                    Arrive 5-10 minutes early for your consultation
+                    Prefer to talk? Call (347) 854-7551 during business hours
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="w-1.5 h-1.5 bg-accent mt-2 shrink-0" />
-                    Bring reference photos if you have a specific style in mind
+                    Bring reference photos when you visit if you have a style in mind
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="w-1.5 h-1.5 bg-accent mt-2 shrink-0" />
-                    Relax and enjoy the experience
+                    Walk-ins always welcome
                   </li>
                 </ul>
               </div>
             </div>
 
-            {/* Booking Form */}
+            {/* Contact Form */}
             <div className="bg-background p-8 lg:p-10">
               <BookingForm />
             </div>
