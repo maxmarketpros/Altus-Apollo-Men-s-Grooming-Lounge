@@ -54,6 +54,19 @@ const galleryVideos = [
   { src: "https://drive.google.com/file/d/1rYnqBUJLcmZiIDU5w-3lAs_lwUA3Nv2t/preview", title: "Grooming reel 3" },
 ]
 
+const localReels = [
+  {
+    src: "/videos/altus-reel-1.mp4",
+    poster: "/videos/altus-reel-1.jpg",
+    title: "Grooming reel 4",
+  },
+  {
+    src: "/videos/altus-reel-2.mp4",
+    poster: "/videos/altus-reel-2.jpg",
+    title: "Grooming reel 5",
+  },
+]
+
 export default function HomePage() {
   return (
     <div className="pt-20">
@@ -396,6 +409,38 @@ export default function HomePage() {
                 />
               </div>
             ))}
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto mt-6">
+            {localReels.map((reel) => (
+              <div
+                key={reel.src}
+                className="aspect-[9/16] relative overflow-hidden bg-primary/5"
+              >
+                <video
+                  src={reel.src}
+                  poster={reel.poster}
+                  controls
+                  muted
+                  playsInline
+                  preload="metadata"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              </div>
+            ))}
+          </div>
+
+          <div className="relative w-full aspect-video overflow-hidden bg-primary mt-12">
+            <video
+              src="/videos/altus-hero-feature.mp4"
+              poster="/videos/altus-hero-feature.jpg"
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="metadata"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
           </div>
         </div>
       </section>
